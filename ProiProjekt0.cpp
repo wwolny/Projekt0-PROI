@@ -3,7 +3,7 @@
 //wwolny@elka.pw.edu.pl
 //prowadzacy: M. Modrzejewski
 //				                Projekt 0
-//
+//                                  TESt
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
