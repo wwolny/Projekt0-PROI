@@ -50,21 +50,24 @@ int main()
     char chr1[100];
     char chr2[100];
 
-    cout<<"Podaj pierwsze slowo, ktore straci ostatnia litere i pojdzie na drugie miejsce: ";
-    while cin>>chr1;
-    cout<<"Podaj drugie slowo, ktore straci pierwsza litere i pojdzie na pierwsze miejsce: ";
+    cout<<"Podaj pierwsze slowo, ktore straci ostatnia litere i pojdzie na drugie miejsce: "<<endl;
+    cin>>chr1;
+    cout<<"Podaj drugie slowo, ktore straci pierwsza litere i pojdzie na pierwsze miejsce: "<<endl;
     cin>>chr2;
 
-    int intDl;
-    intDl=mystrlen(chr1)+mystrlen(chr2)-2;//dlugosc wyniku (bez dwoch znakow)
+    int intDl, intDl1, intDl2;
+    intDl1=mystrlen(chr1);
+    intDl2=mystrlen(chr2)
+    intDl=intDl1+intDl2-2;//dlugosc wyniku (bez dwoch znakow)
 
-    cout<<"Dlugosc ciagu znakowego"<<chr1<<" wynosi"<<mystrlen(chr1);
-    cout<<"Dlugosc ciagu znakowego"<<chr2<<" wynosi"<<mystrlen(chr2);
+    cout<<"Dlugosc ciagu znakowego"<<chr1<<" wynosi"<<intDl1<<endl;
+    cout<<"Dlugosc ciagu znakowego"<<chr2<<" wynosi"<<intDl2<<endl;
 
     char *chrwynik;
-    chrwynik=(char*)malloc(intDl*sizeof(char)); //przydzielenie pamieci wynikowi
-    LaczSlowa( chrwynik, chr1, chr2, mystrlen(chr1), mystrlen(chr2));
+    chrwynik=(char*)malloc(intDl*sizeof(char)+1); //przydzielenie pamieci wynikowi
+    LaczSlowa( chrwynik, chr1, chr2, intDl1, intDl2);
     cout<<"wynik to: "<<chrwynik;
     free(chrwynik); //uwolnienie pamieci
     return 0;
 }
+
