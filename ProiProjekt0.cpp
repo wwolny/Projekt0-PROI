@@ -57,7 +57,7 @@ int main()
 
     int intDl, intDl1, intDl2;
     intDl1=mystrlen(chr1);
-    intDl2=mystrlen(chr2)
+    intDl2=mystrlen(chr2);
     intDl=intDl1+intDl2-2;//dlugosc wyniku (bez dwoch znakow)
 
     cout<<"Dlugosc ciagu znakowego"<<chr1<<" wynosi"<<intDl1<<endl;
