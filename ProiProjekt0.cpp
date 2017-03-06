@@ -47,8 +47,8 @@ void LaczSlowa(char* chrwynik, char* chr1, char* chr2, int chr1len, int chr2len)
 
 int main()
 {
-    char chr1[50];
-    char chr2[50];
+    char chr1[100];
+    char chr2[100];
 
     cout<<"Podaj pierwsze slowo, ktore straci ostatnia litere i pojdzie na drugie miejsce: ";
     while cin>>chr1;
