@@ -28,7 +28,7 @@ int mystrcmp(char* str1, char* str2) //funkcja sprawdza czy slowa sa identyczne
 }
 
 void LaczSlowa(char* chrwynik, char* chr1, char* chr2, int chr1len, int chr2len) //funkcja wypisuje polaczone dwa ciagi znakow,
-//gdzie najpierw wypisane jest drugi ciag bez pierwszego znaku, a pozniej wypisuje drugi ciąg bez ostatniego znaku
+//gdzie najpierw wypisane jest drugi ciag bez pierwszego znaku, a pozniej wypisuje pierwszy ciąg bez ostatniego znaku
 {
     int intDl=0;
     intDl=chr1len+chr2len-2; //dlugosc wyniku
@@ -42,6 +42,7 @@ void LaczSlowa(char* chrwynik, char* chr1, char* chr2, int chr1len, int chr2len)
     {
             chrwynik[i]=chr1[i-chr2len+1];
     }
+	chrwynik[intDl] = '\0';
 }
 
 
@@ -65,14 +66,14 @@ int main()
 
     cout<<"Dlugosc ciagu znakowego \""<<chr1<<"\" wynosi: "<<intDl1<<endl;
     cout<<"Dlugosc ciagu znakowego \""<<chr2<<"\" wynosi: "<<intDl2<<endl;
-
-    char *chrwynik=NULL;
-    chrwynik=new char[intDl*sizeof(char)+1]; //przydzielenie pamieci wynikowi
+	
+    char *chrwynik = new char[intDl+1]; //przydzielenie pamieci wynikowi
     LaczSlowa(chrwynik, chr1, chr2, intDl1, intDl2);
     cout<<"wynik to: "<<chrwynik;
     delete [] chr1;
     delete [] chr2;
     delete [] chrwynik; //uwolnienie pamieci
+	system("pause");
     return 0;
 }
 
