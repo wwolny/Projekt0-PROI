@@ -60,14 +60,14 @@ int main()
     intDl2=mystrlen(chr2);
     intDl=intDl1+intDl2-2;//dlugosc wyniku (bez dwoch znakow)
 
-    cout<<"Dlugosc ciagu znakowego"<<chr1<<" wynosi"<<intDl1<<endl;
-    cout<<"Dlugosc ciagu znakowego"<<chr2<<" wynosi"<<intDl2<<endl;
+    cout<<"Dlugosc ciagu znakowego \""<<chr1<<"\" wynosi: "<<intDl1<<endl;
+    cout<<"Dlugosc ciagu znakowego \""<<chr2<<"\" wynosi: "<<intDl2<<endl;
 
     char *chrwynik;
-    chrwynik=(char*)malloc(intDl*sizeof(char)+1); //przydzielenie pamieci wynikowi
+    chrwynik=new char[intDl*sizeof(char)+1]; //przydzielenie pamieci wynikowi
     LaczSlowa( chrwynik, chr1, chr2, intDl1, intDl2);
     cout<<"wynik to: "<<chrwynik;
-    free(chrwynik); //uwolnienie pamieci
+    delete [] chrwynik; //uwolnienie pamieci
     return 0;
 }
 
