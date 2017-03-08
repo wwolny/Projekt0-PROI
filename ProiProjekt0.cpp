@@ -1,9 +1,9 @@
-//student: Wojciech Wolny Informatyka sem.1 grupa 5
+//student: Wojciech Wolny Informatyka sem.2 grupa 5
 //nr. albumu 283786
 //wwolny@elka.pw.edu.pl
 //prowadzacy: M. Modrzejewski
 //				                Projekt 0
-//                                  TESt
+//                                  
 #include <iostream>
 #include <stdlib.h>
 using namespace std;
@@ -66,7 +66,7 @@ int main()
 
     cout<<"Dlugosc ciagu znakowego \""<<chr1<<"\" wynosi: "<<intDl1<<endl;
     cout<<"Dlugosc ciagu znakowego \""<<chr2<<"\" wynosi: "<<intDl2<<endl;
-	cout << "cos nowego"<<endl;
+	cout <<"cos nowego"<<endl;
 	
     char *chrwynik = new char[intDl+1]; //przydzielenie pamieci wynikowi
     LaczSlowa(chrwynik, chr1, chr2, intDl1, intDl2);
