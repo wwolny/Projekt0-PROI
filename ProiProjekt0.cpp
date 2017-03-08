@@ -66,6 +66,7 @@ int main()
 
     cout<<"Dlugosc ciagu znakowego \""<<chr1<<"\" wynosi: "<<intDl1<<endl;
     cout<<"Dlugosc ciagu znakowego \""<<chr2<<"\" wynosi: "<<intDl2<<endl;
+	cout << "cos nowego"<<endl;
 	
     char *chrwynik = new char[intDl+1]; //przydzielenie pamieci wynikowi
     LaczSlowa(chrwynik, chr1, chr2, intDl1, intDl2);
